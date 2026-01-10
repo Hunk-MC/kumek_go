@@ -568,10 +568,10 @@
             <div class="input-group">
                 <label for="months">Срок рассрочки (в месяцах)</label>
                 <div class="months-input-container">
-                    <input type="number" id="months" placeholder="Например: 12" min="1" max="60" value="12">
+                    <input type="number" id="months" placeholder="Например: 12" min="1" max="12" value="12">
                 </div>
-                <div class="error" id="months-error">Введите срок от 1 до 60 месяцев</div>
-                <div class="months-hint">Можно указать любое количество месяцев от 1 до 60</div>
+                <div class="error" id="months-error">Введите срок от 1 до 12 месяцев</div>
+                <div class="months-hint">Можно указать любое количество месяцев от 1 до 12</div>
             </div>
             
             <button class="btn-calculate" onclick="calculate()">
@@ -678,9 +678,9 @@
                 isValid = false;
             }
             
-            if (isNaN(months) || months < 1 || months > 60) {
+            if (isNaN(months) || months < 1 || months > 12) {
                 document.getElementById('months-error').style.display = 'block';
-                document.getElementById('months-error').textContent = 'Введите срок от 1 до 60 месяцев';
+                document.getElementById('months-error').textContent = 'Введите срок от 1 до 12 месяцев';
                 isValid = false;
             }
             
